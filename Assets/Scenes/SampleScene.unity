@@ -217,7 +217,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3ea06492a44130947b85d6502e31e564, type: 3}
+    m_Font: {fileID: 12800000, guid: b4128b482c5e441349d742f1b93bdefb, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6304cf26852086a4a8f13459e392654c, type: 3}
+    m_Font: {fileID: 12800000, guid: b4128b482c5e441349d742f1b93bdefb, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -633,7 +633,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6304cf26852086a4a8f13459e392654c, type: 3}
+    m_Font: {fileID: 12800000, guid: b4128b482c5e441349d742f1b93bdefb, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -752,6 +752,7 @@ GameObject:
   - component: {fileID: 630750589}
   - component: {fileID: 630750590}
   - component: {fileID: 630750591}
+  - component: {fileID: 630750588}
   m_Layer: 0
   m_Name: player1
   m_TagString: Player
@@ -796,12 +797,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 569a064fe1f5f0a488f149d21d8b75fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a4df37f0e2b84962962724986024ee3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.73, y: 1.02}
+  m_Size: {x: 1.81, y: 2.94}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -816,7 +817,7 @@ Transform:
   m_GameObject: {fileID: 630750584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.48, y: 2.94, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.93, z: 0.9}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -842,6 +843,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &630750588
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630750584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b645f2942ecd64b449c19bfffe98eb1d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!70 &630750589
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1115,7 +1135,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3ea06492a44130947b85d6502e31e564, type: 3}
+    m_Font: {fileID: 12800000, guid: b4128b482c5e441349d742f1b93bdefb, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -1150,6 +1170,7 @@ GameObject:
   - component: {fileID: 881043415}
   - component: {fileID: 881043413}
   - component: {fileID: 881043416}
+  - component: {fileID: 881043414}
   m_Layer: 0
   m_Name: player2
   m_TagString: Player
@@ -1194,7 +1215,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7a7a03bd39200154bb37ef863170fc5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62241dd9c990141f1bc8fc7e1123fad4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1214,7 +1235,7 @@ Transform:
   m_GameObject: {fileID: 881043409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.53, y: 2.97, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.93, z: 0.93}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -1256,6 +1277,25 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0055954875, y: -0.014898778}
   m_Size: {x: 2.9668438, y: 2.7320793}
   m_Direction: 1
+--- !u!95 &881043414
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881043409}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3eca493e060df4acbadfd9ff51dccc13, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &881043415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,7 +2054,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289990625}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 9.41, y: 0.62, z: 0}
+  m_LocalPosition: {x: 9.8, y: 0.62, z: 0}
   m_LocalScale: {x: 2, y: 0.17573999, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2196,12 +2236,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6b70f47a48ce416478ebd68490105062, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad0066d71fda6425998c36a49bd317c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9, y: 6}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2215,8 +2255,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673104530}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 5}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalScale: {x: 0.93, y: 0.93, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -2279,7 +2319,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6304cf26852086a4a8f13459e392654c, type: 3}
+    m_Font: {fileID: 12800000, guid: b4128b482c5e441349d742f1b93bdefb, type: 3}
     m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
@@ -2676,7 +2716,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7a9ce99bf530fed44a151e57e57a45e5,
+      objectReference: {fileID: 21300000, guid: 2b837bd742f8d46f2819ebea60ba4b4b,
         type: 3}
     - target: {fileID: 5017988022675921737, guid: 8e35af612116e72449d5b6b37a9790d1,
         type: 3}
