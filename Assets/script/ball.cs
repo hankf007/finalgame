@@ -53,40 +53,10 @@ public class ball : MonoBehaviour
             Debug.Log("2");
         }
 
-        /* else if (other.gameObject.name == "bottombar1")
-
-         {
+       
 
 
-
-             scoremanager.score2 += 1; //player 2 gains 1 point
-
-
-
-             Destroy(gameObject); //self destruct
-
-
-
-
-         }
-
-
-         else if (other.gameObject.name == "bottombar2")
-         {
-
-
-
-             scoremanager.score1 += 1; //player 1 gains 1 point
-
-
-
-             Destroy(gameObject); //self destruct
-
-
-         }
-
-
-         else if (other.gameObject.name == "net")
+      /*   else if (other.gameObject.name == "net")
          {
 
 
@@ -115,10 +85,48 @@ public class ball : MonoBehaviour
 
          }
 
-     */
+    */
+
+     
 
 
 
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+         if (other.gameObject.name == "goal1")
+
+        {
+
+
+
+            scoremanager.score2 += 1; //player 2 gains 1 point
+
+
+
+            Destroy(gameObject); //self destruct
+
+
+
+
+        }
+
+
+        else if (other.gameObject.name == "goal2")
+        {
+
+
+
+            scoremanager.score1 += 1; //player 1 gains 1 point
+
+
+
+
+            Destroy(gameObject); //self destruct
+
+
+        }
     }
 
 
