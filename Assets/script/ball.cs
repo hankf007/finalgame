@@ -17,6 +17,8 @@ public class ball : MonoBehaviour
 
     public GameObject portalout;
 
+    
+
  
 
 
@@ -68,7 +70,9 @@ public class ball : MonoBehaviour
 
         else if (other.gameObject.name == "portalin1" || other.gameObject.name == "portalin2")
         {
-            gameObject.transform.position = portalout.transform.position;
+            gameObject.transform.position = GameObject.FindWithTag("portalout").transform.position;
+
+           // Debug.Log("portalout"+portalout.transform.position);
             
 
         }
@@ -123,8 +127,9 @@ public class ball : MonoBehaviour
             scoremanager.score2 += 1; //player 2 gains 1 point
 
 
+          
 
-            Destroy(gameObject); //self destruct
+           Destroy(gameObject); //self destruct
 
 
 

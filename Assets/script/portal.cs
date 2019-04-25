@@ -10,7 +10,7 @@ public class portal : MonoBehaviour
     private float nextActionTime = 5;
     public float period = 0.1f;
 
-    public Vector2 pos;
+  //  public Vector2 pos;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class portal : MonoBehaviour
         {
             nextActionTime += period;
             gameObject.transform.position = new Vector2(Random.Range(-6, 6), Random.Range(0, 4)); ; //move to random spot
-            Debug.Log(gameObject.transform.position);
+            Debug.Log("portal'sowndebug"+gameObject.transform.position);
 
             
         }
