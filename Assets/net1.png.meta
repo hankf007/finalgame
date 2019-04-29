@@ -99,9 +99,9 @@ TextureImporter:
       name: net1_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 23
         y: 0
-        width: 227
+        width: 201
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -121,7 +121,7 @@ TextureImporter:
         serializedVersion: 2
         x: 249
         y: 0
-        width: 202
+        width: 200
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -140,9 +140,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 471
-        y: 1
-        width: 203
-        height: 223
+        y: 0
+        width: 201
+        height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,9 +159,9 @@ TextureImporter:
       name: net1_3
       rect:
         serializedVersion: 2
-        x: 692
+        x: 696
         y: 0
-        width: 206
+        width: 201
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -181,7 +181,7 @@ TextureImporter:
         serializedVersion: 2
         x: 920
         y: 0
-        width: 202
+        width: 201
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -199,9 +199,9 @@ TextureImporter:
       name: net1_5
       rect:
         serializedVersion: 2
-        x: 1143
+        x: 1144
         y: 0
-        width: 203
+        width: 200
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -219,9 +219,9 @@ TextureImporter:
       name: net1_6
       rect:
         serializedVersion: 2
-        x: 1361
+        x: 1368
         y: 0
-        width: 211
+        width: 201
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -239,9 +239,9 @@ TextureImporter:
       name: net1_7
       rect:
         serializedVersion: 2
-        x: 1593
+        x: 1592
         y: 0
-        width: 202
+        width: 201
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -261,7 +261,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1815
         y: 0
-        width: 203
+        width: 201
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -279,9 +279,9 @@ TextureImporter:
       name: net1_9
       rect:
         serializedVersion: 2
-        x: 2034
+        x: 2040
         y: 0
-        width: 209
+        width: 201
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -299,9 +299,9 @@ TextureImporter:
       name: net1_10
       rect:
         serializedVersion: 2
-        x: 2266
+        x: 2264
         y: 0
-        width: 202
+        width: 201
         height: 224
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
