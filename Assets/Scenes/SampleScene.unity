@@ -763,6 +763,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -778,6 +779,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afc8d0f702128b49a7d9587629a3d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portal: {fileID: 264022431034382542, guid: 8c30bdf707644d449904517c6b9536b9, type: 3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2965,6 +2979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 264022431034382542, guid: 8c30bdf707644d449904517c6b9536b9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1279586370585358555, guid: 8c30bdf707644d449904517c6b9536b9,
         type: 3}
