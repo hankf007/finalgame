@@ -21,7 +21,7 @@ public class Soundplayer : MonoBehaviour
 
         if (other.gameObject.tag == "Ball" )
         {
-            AudioSource.PlayClipAtPoint(soundeffect1, transform.position);
+          //  AudioSource.PlayClipAtPoint(soundeffect1, transform.position);
 
            
 
@@ -30,7 +30,7 @@ public class Soundplayer : MonoBehaviour
 
         if (other.gameObject == player)
         {
-            AudioSource.PlayClipAtPoint(soundeffect2, transform.position);
+          //  AudioSource.PlayClipAtPoint(soundeffect2, transform.position);
 
 
 

@@ -17,15 +17,20 @@ public class ball : MonoBehaviour
 
     public GameObject portalout;
 
-    
-
- 
-
-
+    public int amountForceX1;
+    public int amountForceX2;
+    public int amountForceY;
 
 
 
+   // public player player1;
 
+    //public float kickForce;
+
+
+
+
+            
 
 
     // Start is called before the first frame update
@@ -35,7 +40,7 @@ public class ball : MonoBehaviour
 
         scoremanager = GameObject.FindWithTag("Scoremanager").GetComponent<Scoremanager>(); //calls scoremanager
 
-      
+     //  player1 = GetComponent<player>();
 
 
     }
@@ -53,19 +58,40 @@ public class ball : MonoBehaviour
 
         if (other.gameObject.name == "player1")
         {
-            anim.SetBool("isorange", false);
+
+          //  anim.SetBool("isorange", false);
 
 
           //  Debug.Log("1");
+
+        if (GameObject.Find("player1").GetComponent<player>().kicking == true)
+            {
+                Debug.Log("kicked");
+                RB.AddForce(new Vector2(amountForceX1, amountForceY)); // kick the ball
+
+
+                // Vector3 direction = (other.transform.position - transform.position).normalized;
+                // GetComponent<Rigidbody2D>().AddForce(transform.up * kickForce);
+            }
         }
 
 
         else if (other.gameObject.name == "player2")
         {
-            anim.SetBool("isorange", true);
+            //  anim.SetBool("isorange", true);
 
 
-          //  Debug.Log("2");
+            //  Debug.Log("2");
+
+            if (GameObject.Find("player2").GetComponent<player>().kicking == true)
+            {
+                Debug.Log("kicked");
+                RB.AddForce(new Vector2(amountForceX2, amountForceY)); // kick the ball
+
+
+                // Vector3 direction = (other.transform.position - transform.position).normalized;
+                // GetComponent<Rigidbody2D>().AddForce(transform.up * kickForce);
+            }
         }
 
         else if (other.gameObject.name == "portalin1" || other.gameObject.name == "portalin2")
@@ -77,38 +103,41 @@ public class ball : MonoBehaviour
 
         }
 
+       
+
+            
 
 
-      /*   else if (other.gameObject.name == "net")
-         {
-
-
-
-             scoremanager.score2 += 1; //player 1 gains 1 point
-
-
-
-             Destroy(gameObject); //self destruct
+           else if (other.gameObject.name == "net")
+               {
 
 
 
-         }
-         else if (other.gameObject.name == "net2")
-         {
+               scoremanager.score2 += 1; //player 1 gains 1 point
 
 
 
-             scoremanager.score1 += 1; //player 1 gains 1 point
+               Destroy(gameObject); //self destruct
 
 
 
-             Destroy(gameObject); //self destruct
+           }
+           else if (other.gameObject.name == "net2")
+           {
 
 
 
-         }
+               scoremanager.score1 += 1; //player 1 gains 1 point
 
-    */
+
+
+               Destroy(gameObject); //self destruct
+
+
+
+           }
+
+      
 
 
 

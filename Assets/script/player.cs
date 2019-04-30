@@ -19,10 +19,19 @@ public class player : MonoBehaviour
     public KeyCode right;
     public KeyCode up;
 
+    public KeyCode kick;
+
     public Sprite sprite1;
     public Sprite sprite2;
 
-   
+
+    public bool kicking = false;
+    float animationDuration=0.5f; // Animation time in seconds
+
+   // public ball ballscript;
+
+
+
 
 
 
@@ -55,6 +64,14 @@ public class player : MonoBehaviour
         }
         RB.velocity = vel;
 
+        if(Input.GetKey(kick))
+        {
+            Kick();
+        }
+
+
+       
+
 
     }
 
@@ -67,8 +84,17 @@ public class player : MonoBehaviour
 
         }
 
-      
+        /*if (other.gameObject.tag == "Ball" && kicking == true)
+          {
 
+             // Vector3 direction = (other.transform.position - transform.position).normalized;
+             // ballscript.GetComponent<Rigidbody2D>().AddForce(transform.up * 500);
+          }
+
+
+
+       //ballscript = GetComponent<ball>();
+*/
     }
 
 
@@ -81,6 +107,22 @@ public class player : MonoBehaviour
         }
     }
 
+
+    private void Kick()
+    {
+        if (!kicking)
+        {
+            kicking = true;
+            Debug.Log("kicktrue");
+            Invoke("StopKicking", animationDuration); //set kick to false after animation
+        }
+    }
+
+    private void StopKicking()
+    {
+        kicking = false;
+        Debug.Log("kickfalse");
+    }
 
 
 

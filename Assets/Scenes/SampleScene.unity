@@ -993,8 +993,10 @@ MonoBehaviour:
   left: 97
   right: 100
   up: 119
+  kick: 103
   sprite1: {fileID: 21300000, guid: 569a064fe1f5f0a488f149d21d8b75fb, type: 3}
   sprite2: {fileID: 21300000, guid: 0a68a5232722f6b40b5a4995dc9063b5, type: 3}
+  kicking: 0
 --- !u!114 &630750591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1458,8 +1460,10 @@ MonoBehaviour:
   left: 276
   right: 275
   up: 273
+  kick: 46
   sprite1: {fileID: 21300000, guid: 0247ef5e93a687f42849684c5de6d1cf, type: 3}
   sprite2: {fileID: 21300000, guid: 7a7a03bd39200154bb37ef863170fc5e, type: 3}
+  kicking: 0
 --- !u!114 &881043416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3122,15 +3126,60 @@ PrefabInstance:
       propertyPath: regenpos2.x
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: kickForce
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: playerscript
+      value: 
+      objectReference: {fileID: 630750590}
+    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: amountForceX
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: amountForceY
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 630750590}
+    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: amountForceX1
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: amountForceX2
+      value: -500
+      objectReference: {fileID: 0}
     - target: {fileID: 9142560480892959985, guid: 8e35af612116e72449d5b6b37a9790d1,
         type: 3}
       propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9142560480892959985, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9142560480892959984, guid: 8e35af612116e72449d5b6b37a9790d1,
         type: 3}
       propertyPath: m_Radius
       value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142560479874572932, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e35af612116e72449d5b6b37a9790d1, type: 3}
