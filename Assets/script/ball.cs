@@ -108,7 +108,7 @@ public class ball : MonoBehaviour
             
 
 
-           else if (other.gameObject.name == "net")
+           else if (other.gameObject.name == "goal1")
                {
 
 
@@ -122,7 +122,7 @@ public class ball : MonoBehaviour
 
 
            }
-           else if (other.gameObject.name == "net2")
+           else if (other.gameObject.name == "goal2")
            {
 
 
@@ -145,7 +145,7 @@ public class ball : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    /*void OnTriggerEnter2D(Collider2D other)
     {
          if (other.gameObject.name == "goal1")
 
@@ -182,7 +182,7 @@ public class ball : MonoBehaviour
         }
     }
 
-
+    */
 
 
 

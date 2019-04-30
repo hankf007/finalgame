@@ -3096,16 +3096,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959988, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959988, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.93
-      objectReference: {fileID: 0}
     - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
         type: 3}
       propertyPath: scoremanager
@@ -3116,70 +3106,5 @@ PrefabInstance:
       propertyPath: portalout
       value: 
       objectReference: {fileID: 1681710464572459695}
-    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: regenpos1.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: regenpos2.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: kickForce
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: playerscript
-      value: 
-      objectReference: {fileID: 630750590}
-    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: amountForceX
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: amountForceY
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: player1
-      value: 
-      objectReference: {fileID: 630750590}
-    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: amountForceX1
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: amountForceX2
-      value: -500
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959985, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959985, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560480892959984, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 9142560479874572932, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e35af612116e72449d5b6b37a9790d1, type: 3}
