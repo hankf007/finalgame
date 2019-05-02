@@ -24,6 +24,8 @@ public class player : MonoBehaviour
     public Sprite sprite1;
     public Sprite sprite2;
 
+    public Animator Animator;
+
 
     public bool kicking = false;
     float animationDuration=0.5f; // Animation time in seconds
@@ -36,7 +38,7 @@ public class player : MonoBehaviour
 
 
 
-
+   
     // Update is called once per frame
     void Update()
     {
@@ -114,6 +116,7 @@ public class player : MonoBehaviour
         {
             kicking = true;
             Debug.Log("kicktrue");
+            Animator.SetBool("isKicking", true);
             Invoke("StopKicking", animationDuration); //set kick to false after animation
         }
     }
@@ -122,6 +125,7 @@ public class player : MonoBehaviour
     {
         kicking = false;
         Debug.Log("kickfalse");
+        Animator.SetBool("isKicking", false);
     }
 
 
