@@ -3325,5 +3325,10 @@ PrefabInstance:
       propertyPath: portalout
       value: 
       objectReference: {fileID: 1681710464572459695}
+    - target: {fileID: 9142560480892959990, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: amountForceY
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e35af612116e72449d5b6b37a9790d1, type: 3}
