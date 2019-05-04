@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OpenSceneSelect : MonoBehaviour
 {
@@ -17,19 +18,17 @@ public class OpenSceneSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.DownArrow)) //select quit
         {
-            transform.position = new Vector2(-2.04f, -2.31f);
-        }
-
-        if (Input.GetKeyUp(KeyCode.UpArrow))
-        {
-            transform.position = new Vector2(-2.04f, -0.77f);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
+            transform.position = new Vector2(-1.68f, -2.31f);
 
         }
+
+        if (Input.GetKeyUp(KeyCode.UpArrow)) //select start
+        {
+            transform.position = new Vector2(-1.68f, -0.77f);
+
+        }
+
     }
 }
