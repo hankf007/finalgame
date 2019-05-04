@@ -94,7 +94,7 @@ public class ball : MonoBehaviour
             }
         }
 
-        else if (other.gameObject.name == "portalin1" || other.gameObject.name == "portalin2")
+        else if (other.gameObject.tag == "portal" )
         {
             gameObject.transform.position = GameObject.FindWithTag("portalout").transform.position;
 
