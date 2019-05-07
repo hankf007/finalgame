@@ -248,6 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 267177131}
   - component: {fileID: 267177130}
+  - component: {fileID: 267177132}
   m_Layer: 0
   m_Name: p2 portal bar
   m_TagString: Untagged
@@ -292,7 +293,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 951deb37c57034a99945190c9ae19cca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 651fc9f80ef844e51bec06b7190a8e9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -317,6 +318,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &267177132
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267177129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f1e4233a9290419a83bce7913bc1c4e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &342637236
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 469448428}
   - component: {fileID: 469448427}
+  - component: {fileID: 469448429}
   m_Layer: 0
   m_Name: p1 portal bar
   m_TagString: Untagged
@@ -905,7 +926,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 951deb37c57034a99945190c9ae19cca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97473d0abbf334e3aa4cd64bbc5f71fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -930,6 +951,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &469448429
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469448426}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 85d76b9c1f3fc4a76b6803933e09811d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3656,6 +3696,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9142560480892959987, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: m_Name
+      value: ball
+      objectReference: {fileID: 0}
     - target: {fileID: 5353906319055942109, guid: 8e35af612116e72449d5b6b37a9790d1,
         type: 3}
       propertyPath: Spawnx1
@@ -3671,11 +3716,6 @@ PrefabInstance:
       propertyPath: portalout
       value: 
       objectReference: {fileID: 1681710464572459695}
-    - target: {fileID: 9142560480892959987, guid: 8e35af612116e72449d5b6b37a9790d1,
-        type: 3}
-      propertyPath: m_Name
-      value: ball
-      objectReference: {fileID: 0}
     - target: {fileID: 9142560480892959988, guid: 8e35af612116e72449d5b6b37a9790d1,
         type: 3}
       propertyPath: m_LocalPosition.x
