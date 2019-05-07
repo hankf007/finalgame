@@ -91,48 +91,8 @@ TextureImporter:
       name: p2_kick_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 16
-        width: 200
-        height: 224
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3ded604b36b0434d902d4604282372f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: p2_kick_1
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 16
-        width: 216
-        height: 224
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0816d0aba70f64834b747a6827bd7917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: p2_kick_2
-      rect:
-        serializedVersion: 2
-        x: 584
-        y: 16
+        x: 0
+        y: 0
         width: 256
         height: 224
       alignment: 0
@@ -142,18 +102,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e5a96e88cb0a42f28102af6be800c4a
+      spriteID: da286fea3c1bc499990253e890e5727e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: p2_kick_3
+      name: p2_kick_1
       rect:
         serializedVersion: 2
-        x: 896
-        y: 16
-        width: 216
+        x: 256
+        y: 0
+        width: 256
         height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -162,7 +122,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72b7978ee7dc4427f9171c2c7a4fe395
+      spriteID: 9e55cc1f4e2144be6b0c80a90afcdbdf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p2_kick_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c119c830ee44fd0af6899047d3cfc8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p2_kick_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a76c72645f649b380d48e0ab551d6a
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5512a4fabc6514ee880380e66c885d7f
+    spriteID: 5e1e8ac527ea94b2b96179b0cecfa6df
     vertices: []
     indices: 
     edges: []
