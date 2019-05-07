@@ -52,8 +52,9 @@ public class ball : MonoBehaviour
 
         scoremanager = GameObject.FindWithTag("Scoremanager").GetComponent<Scoremanager>(); //calls scoremanager
 
-     //  player1 = GetComponent<player>();
+        //  player1 = GetComponent<player>();
 
+        
 
     }
 
@@ -68,45 +69,9 @@ public class ball : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
 
-        if (other.gameObject.name == "player1")
-        {
+        
 
-          //  anim.SetBool("isorange", false);
-
-
-          //  Debug.Log("1");
-
-        if (GameObject.Find("player1").GetComponent<player>().kicking == true)
-            {
-                Debug.Log("kicked");
-                RB.AddForce(new Vector2(amountForceX1, amountForceY)); // kick the ball
-
-
-                // Vector3 direction = (other.transform.position - transform.position).normalized;
-                // GetComponent<Rigidbody2D>().AddForce(transform.up * kickForce);
-            }
-        }
-
-
-        else if (other.gameObject.name == "player2")
-        {
-            //  anim.SetBool("isorange", true);
-
-
-            //  Debug.Log("2");
-
-            if (GameObject.Find("player2").GetComponent<player>().kicking == true)
-            {
-                Debug.Log("kicked");
-                RB.AddForce(new Vector2(amountForceX2, amountForceY)); // kick the ball
-
-
-                // Vector3 direction = (other.transform.position - transform.position).normalized;
-                // GetComponent<Rigidbody2D>().AddForce(transform.up * kickForce);
-            }
-        }
-
-        else if (other.gameObject.name == "portalin1" )
+         if (other.gameObject.name == "portalin1" )
         {
             portalout.SetActive(true);
             GameObject.FindWithTag("portalout").transform.position = new Vector2(4, 0); //summon portal out
@@ -228,11 +193,54 @@ public class ball : MonoBehaviour
 
 
 
-
-
-
+       
 
     }
+    void OnTriggerEnter2D(Collider2D other)
+
+    {
+
+        if (other.gameObject.name == "player1")
+        {
+
+            //  anim.SetBool("isorange", false);
+
+
+            //  Debug.Log("1");
+
+            if (GameObject.Find("player1").GetComponent<player>().kicking == true)
+            {
+                Debug.Log("kicked");
+                RB.AddForce(new Vector2(amountForceX1, amountForceY)); // kick the ball
+
+
+                // Vector3 direction = (other.transform.position - transform.position).normalized;
+                // GetComponent<Rigidbody2D>().AddForce(transform.up * kickForce);
+            }
+        }
+
+
+        else if (other.gameObject.name == "player2")
+        {
+            //  anim.SetBool("isorange", true);
+
+
+            //  Debug.Log("2");
+
+            if (GameObject.Find("player2").GetComponent<player>().kicking == true)
+            {
+                Debug.Log("kicked");
+                RB.AddForce(new Vector2(amountForceX2, amountForceY)); // kick the ball
+
+
+                // Vector3 direction = (other.transform.position - transform.position).normalized;
+                // GetComponent<Rigidbody2D>().AddForce(transform.up * kickForce);
+            }
+        }
+    }
+
+
+
     private IEnumerator Destroy()
     {
         yield return new WaitForSeconds(2f); //wait 2 secs until portal disappear
