@@ -24,14 +24,14 @@ public class portal : MonoBehaviour
     void Update()
     {
 
-        if (Time.time > nextActionTime) //execute every x seconds
+       /* if (Time.time > nextActionTime) //execute every x seconds
         {
             nextActionTime += period;
             gameObject.transform.position = new Vector2(RandomExcept(-6,6,0), Random.Range(0, 4)) ; //move to random spot
             Debug.Log("portal'sowndebug"+gameObject.transform.position);
 
             
-        }
+        } */
     }
 
 

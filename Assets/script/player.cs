@@ -36,7 +36,7 @@ public class player : MonoBehaviour
     public Text power;
     public KeyCode powerkey;
 
-    public GameObject portalin1;
+    public GameObject portalin;
 
 
 
@@ -147,16 +147,15 @@ public class player : MonoBehaviour
     }
 
 
-    private void Power()
+    private void Power() 
     {
     
         Debug.Log("summon");
-        portalin1.SetActive(true);
-        //Instantiate(portalin1, new Vector2(0,-1), Quaternion.identity);
-
+        portalin.SetActive(true);
+       
 
         
-        StartCoroutine(Destroy());//this will happen after 2 seconds
+        StartCoroutine(Destroy());
         Debug.Log("destroyed");
 
         powerbar = 0;
@@ -165,9 +164,9 @@ public class player : MonoBehaviour
 
     private IEnumerator Destroy()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
 
-        portalin1.SetActive(false);
+        portalin.SetActive(false);
     }
 
 
