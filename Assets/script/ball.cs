@@ -16,21 +16,33 @@ public class ball : MonoBehaviour
     public AudioClip buzzer;
 
     public GameObject portalout;
+    public GameObject portalin1;
+    public GameObject portalin2;
+
 
     public int amountForceX1;
     public int amountForceX2;
     public int amountForceY;
 
+    public int portalForceX1;
+    public int portalForceX2;
+    public int portalForceY;
 
 
-   // public player player1;
+    public int Spawnx1;
+    public int Spawnx2;
+    public int Spawny;
+
+
+
+    // public player player1;
 
     //public float kickForce;
 
 
 
 
-            
+
 
 
     // Start is called before the first frame update
@@ -94,34 +106,105 @@ public class ball : MonoBehaviour
             }
         }
 
-        else if (other.gameObject.name == "portalin1" || other.gameObject.name == "portalin2")
+        else if (other.gameObject.name == "portalin1" )
         {
+            portalout.SetActive(true);
+            GameObject.FindWithTag("portalout").transform.position = new Vector2(4, 0); //summon portal out
             gameObject.transform.position = GameObject.FindWithTag("portalout").transform.position;
 
-           // Debug.Log("portalout"+portalout.transform.position);
-            
+            RB.velocity = Vector3.zero; //set velocti to 0
+          
+
+            RB.AddForce(new Vector2(portalForceX1, portalForceY)); //give new velocity
+
+            portalin1.SetActive(false); //deactivate portalin
+
+            StartCoroutine(Destroy()); //deactivate portalout
+
+            // Debug.Log("portalout"+portalout.transform.position);
+
+
+        }
+        else if (other.gameObject.name == "portalin2")
+        { 
+            portalout.SetActive(true);
+            GameObject.FindWithTag("portalout").transform.position = new Vector2(-4, 0); //summon portal out
+            gameObject.transform.position = GameObject.FindWithTag("portalout").transform.position;
+
+            RB.velocity = Vector3.zero; //set velocti to 0
+
+            RB.AddForce(new Vector2(portalForceX2, portalForceY));
+
+            portalin2.SetActive(false);
+
+            StartCoroutine(Destroy());
+
+
+            // Debug.Log("portalout"+portalout.transform.position);
+
 
         }
 
-       
 
+        else if (other.gameObject.name == "bottombar1")
+        { //if ball falls onto ground the power decreases
+
+            if (GameObject.Find("player1").GetComponent<player>().powerbar <= 50)
+            {
+                GameObject.Find("player1").GetComponent<player>().powerbar = 0;
+            }
+
+            else 
+            {
+                GameObject.Find("player1").GetComponent<player>().powerbar -= 50;
+
+            }
+
+
+        }
+        else if (other.gameObject.name == "bottombar2")
+        {
+            //if ball falls onto ground the power decreases
+
+            if (GameObject.Find("player2").GetComponent<player>().powerbar <= 50)
+            {
+                GameObject.Find("player2").GetComponent<player>().powerbar = 0;
+            }
+
+            else
+            {
+                GameObject.Find("player2").GetComponent<player>().powerbar -= 50;
+
+            }
+
+        }
+
+        
+
+
+
+
+        else if (other.gameObject.name == "goal1")
+               {
             
 
-
-           else if (other.gameObject.name == "goal1")
-               {
-
-
+                
 
                scoremanager.score2 += 1; //player 1 gains 1 point
 
+            RB.velocity = Vector3.zero; //set velocty to 0
+
+            gameObject.transform.position = new Vector2(Spawnx2,Spawny);
+                
+           
 
 
-               Destroy(gameObject); //self destruct
+
+            // Destroy(gameObject); //self destruct
 
 
 
-           }
+        }
            else if (other.gameObject.name == "goal2")
            {
 
@@ -130,59 +213,35 @@ public class ball : MonoBehaviour
                scoremanager.score1 += 1; //player 1 gains 1 point
 
 
+            RB.velocity = Vector3.zero; //set velocti to 0
 
-               Destroy(gameObject); //self destruct
+            gameObject.transform.position = new Vector2(Spawnx1, Spawny);
 
 
 
-           }
 
-      
+            // Destroy(gameObject); //self destruct
+
+
+
+        }
+
+
 
 
 
 
 
     }
-
-    /*void OnTriggerEnter2D(Collider2D other)
+    private IEnumerator Destroy()
     {
-         if (other.gameObject.name == "goal1")
+        yield return new WaitForSeconds(2f); //wait 2 secs until portal disappear
 
-        {
-
-
-
-            scoremanager.score2 += 1; //player 2 gains 1 point
-
-
-          
-
-           Destroy(gameObject); //self destruct
-
-
-
-
-        }
-
-
-        else if (other.gameObject.name == "goal2")
-        {
-
-
-
-            scoremanager.score1 += 1; //player 1 gains 1 point
-
-
-
-
-            Destroy(gameObject); //self destruct
-
-
-        }
+        portalout.SetActive(false);
     }
 
-    */
+
+    
 
 
 

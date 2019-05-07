@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour
     
@@ -30,15 +31,18 @@ public class player : MonoBehaviour
     public bool kicking = false;
     float animationDuration=0.5f; // Animation time in seconds
 
-   // public ball ballscript;
+
+    public float powerbar=0;
+    public Text power;
+    public KeyCode powerkey;
+
+    public GameObject portalin;
 
 
 
 
 
 
-
-   
     // Update is called once per frame
     void Update()
     {
@@ -71,8 +75,22 @@ public class player : MonoBehaviour
             Kick();
         }
 
+        
 
-       
+        if (powerbar < 100)
+        {
+            powerbar += 5 * Time.deltaTime; //increase power automatically
+            power.text = powerbar.ToString();
+        }
+
+        if (Input.GetKey(powerkey) && powerbar >= 100)
+        {
+            Power();
+        }
+
+
+
+
 
 
     }
@@ -127,6 +145,30 @@ public class player : MonoBehaviour
         Debug.Log("kickfalse");
         Animator.SetBool("isKicking", false);
     }
+
+
+    private void Power() 
+    {
+    
+        Debug.Log("summon");
+        portalin.SetActive(true);
+       
+
+        
+        StartCoroutine(Destroy());
+        Debug.Log("destroyed");
+
+        powerbar = 0;
+
+    }
+
+    private IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(5f);
+
+        portalin.SetActive(false);
+    }
+
 
 
 

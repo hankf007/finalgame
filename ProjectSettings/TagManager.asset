@@ -9,6 +9,7 @@ TagManager:
   - Scoremanager
   - Ball
   - portalout
+  - portal
   layers:
   - Default
   - TransparentFX
