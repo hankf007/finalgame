@@ -83,7 +83,7 @@ public class player : MonoBehaviour
             power.text = powerbar.ToString();
         }
 
-        if (Input.GetKey(powerkey) && powerbar >= 100)
+        if (Input.GetKey(powerkey) && powerbar >= 10)
         {
             Power();
         }
