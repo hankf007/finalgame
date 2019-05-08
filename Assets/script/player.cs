@@ -46,36 +46,46 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Animator.SetBool("isKicking", false);
+        Animator.SetBool("isJumping", false);
 
         Vector3 vel = RB.velocity;
         if (Input.GetKey(right))
         {
             vel.x = Speed;
             gameObject.GetComponent<SpriteRenderer>().sprite = sprite1; //change sprite
+
+            Animator.SetFloat("Speed", Mathf.Abs(vel.x)); //anim transits from idle to walk when speeds
         }
         else if (Input.GetKey(left))
         {
             vel.x = -Speed;
             gameObject.GetComponent<SpriteRenderer>().sprite = sprite2; //change sprite
+
+            Animator.SetFloat("Speed", Mathf.Abs(vel.x)); //anim transits from idle to walk when speeds
         }
         else
         {
             vel.x = 0;
+            Animator.SetFloat("Speed", Mathf.Abs(vel.x));
         }
+
         if ((Input.GetKeyDown(up)) && (Jump==true)) //can only jump if on the ground
         {
             vel.y = Jumpvel;
-          
+            Animator.SetBool("isJumping", true); //play jump anim 
         }
+
         RB.velocity = vel;
 
         if(Input.GetKey(kick))
         {
             Kick();
+
+            Animator.SetBool("isKicking", true);
         }
 
-        
+
 
         if (powerbar < 100)
         {
@@ -99,6 +109,7 @@ public class player : MonoBehaviour
     {
         if (other.gameObject.tag == "Floor")
         {
+
             Jump = true;
             //Debug.Log("True ");
 
@@ -123,7 +134,9 @@ public class player : MonoBehaviour
         if (other.gameObject.tag == "Floor")
         {
             Jump = false;
-           // Debug.Log("False");
+            // Debug.Log("False");
+
+
         }
     }
 
@@ -134,7 +147,7 @@ public class player : MonoBehaviour
         {
             kicking = true;
             Debug.Log("kicktrue");
-            Animator.SetBool("isKicking", true);
+
             Invoke("StopKicking", animationDuration); //set kick to false after animation
         }
     }

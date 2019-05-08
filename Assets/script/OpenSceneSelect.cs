@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class OpenSceneSelect : MonoBehaviour
 {
-    int index = 0;
-    public int totalOptions = 2;
-    public float yOffset = 1f;
+
 
     // Start is called before the first frame update
     void Start()
