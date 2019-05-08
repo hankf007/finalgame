@@ -734,7 +734,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.01, y: 2.24}
+    oldSize: {x: 2.24, y: 2.24}
     newSize: {x: 6.32, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -760,7 +760,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.01, y: 2.24}
+    oldSize: {x: 2.24, y: 2.24}
     newSize: {x: 6.32, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1273,7 +1273,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 2.96}
+    oldSize: {x: 1.84, y: 2.96}
     newSize: {x: 1.76, y: 2.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1299,7 +1299,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.76, y: 2.96}
+    oldSize: {x: 1.84, y: 2.96}
     newSize: {x: 1.76, y: 2.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1805,7 +1805,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2.24}
+    oldSize: {x: 2.16, y: 2.24}
     newSize: {x: 2, y: 2.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1831,7 +1831,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2.24}
+    oldSize: {x: 2.16, y: 2.24}
     newSize: {x: 2, y: 2.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3073,7 +3073,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.01, y: 2.24}
+    oldSize: {x: 2.24, y: 2.24}
     newSize: {x: 6.32, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3161,7 +3161,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.01, y: 2.24}
+    oldSize: {x: 2.24, y: 2.24}
     newSize: {x: 6.32, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

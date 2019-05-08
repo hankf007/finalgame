@@ -6,6 +6,14 @@ TextureImporter:
     21300002: p1_kick_1
     21300004: p1_kick_2
     21300006: p1_kick_3
+    21300008: p1_kick_4
+    21300010: p1_kick_5
+    21300012: p1_kick_6
+    21300014: p1_kick_7
+    21300016: p1_kick_8
+    21300018: p1_kick_9
+    21300020: p1_kick_10
+    21300022: p1_kick_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -35,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -75,14 +83,14 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
@@ -93,7 +101,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 248
+        width: 82.666664
         height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -102,7 +110,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63094d2cc6ab3487699f0856b71980da
+      spriteID: c339664777b14489da6317b4c8b51aa4
       vertices: []
       indices: 
       edges: []
@@ -111,9 +119,9 @@ TextureImporter:
       name: p1_kick_1
       rect:
         serializedVersion: 2
-        x: 248
+        x: 82
         y: 0
-        width: 248
+        width: 82.666664
         height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -122,7 +130,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f227b5aadfd94cfc8e22aca9f1c82f8
+      spriteID: 8f7243d73fcd24fe7ad36b0dc4315221
       vertices: []
       indices: 
       edges: []
@@ -131,9 +139,9 @@ TextureImporter:
       name: p1_kick_2
       rect:
         serializedVersion: 2
-        x: 496
+        x: 164
         y: 0
-        width: 248
+        width: 82.666664
         height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,7 +150,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3d5d45e2f4f34f1d8c673b73b76808c
+      spriteID: 65a928672771844c9b23401f7103bdf7
       vertices: []
       indices: 
       edges: []
@@ -151,9 +159,9 @@ TextureImporter:
       name: p1_kick_3
       rect:
         serializedVersion: 2
-        x: 744
+        x: 246
         y: 0
-        width: 248
+        width: 82.666664
         height: 288
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -162,7 +170,167 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1ff57a31b22149e0aa8c2d4ecaef5fc
+      spriteID: 3cc343539a3834df4b4028944de17086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_kick_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 82.666664
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f640e36ac502492db5debaeb42fd2b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_kick_5
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 0
+        width: 82.666664
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577389d49ebbb4630b06e5176fab9268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_kick_6
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 0
+        width: 82.666664
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0af29506f334020a01dafaa94934d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_kick_7
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 0
+        width: 82.666664
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d1f403bd292483284003ceb3911252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_kick_8
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 0
+        width: 82.666664
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a44f78e69b747b3ab10179cbad264f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_kick_9
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 0
+        width: 82.666664
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b602ffe98e13949e3ad71ef05c3029be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_kick_10
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 0
+        width: 82.666664
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb08bd83e6e14867934a9676943ac6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: p1_kick_11
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 0
+        width: 82.666664
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc4262fbf83041d0a2abe6680f5897f
       vertices: []
       indices: 
       edges: []
