@@ -37,14 +37,14 @@ public class Scoremanager : MonoBehaviour
 
        
 
-       if(score1 == 11)
+       if(score1 == 1)
         {
-            SceneManager.LoadScene("scene1");
+            SceneManager.LoadScene("End1");
         }
 
-        if (score2 == 11)
+        if (score2 == 1)
         {
-            SceneManager.LoadScene("scene2");
+            SceneManager.LoadScene("End2");
         }
 
     }
