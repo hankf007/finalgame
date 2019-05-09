@@ -86,11 +86,13 @@ public class player : MonoBehaviour
         {
             vel.y = Jumpvel;
             Animator.SetBool("isJumping", true); //play jump anim 
+
+            Jump = false;
         }
 
         RB.velocity = vel;  
 
-        if(Input.GetKey(kick)  && GameObject.Find("ball").GetComponent<ball>().cankick1==true)
+        if(Input.GetKey(kick)  && GameObject.Find("ball").GetComponent<ball>().cankick1==true) //only the player touching the ball can kick it
         {
             if(gameObject.name=="player1")
 
@@ -99,7 +101,7 @@ public class player : MonoBehaviour
             Animator.SetBool("isKicking", true);
         }
 
-        if (Input.GetKey(kick) && GameObject.Find("ball").GetComponent<ball>().cankick2 == true)
+        if (Input.GetKey(kick) && GameObject.Find("ball").GetComponent<ball>().cankick2 == true)//only the player touching the ball can kick it
         {
             if (gameObject.name == "player2")
 
@@ -137,10 +139,11 @@ public class player : MonoBehaviour
     {
         if (other.gameObject.tag == "Floor")
         {
+            
+                Jump = true;
 
-            Jump = true;
-            //Debug.Log("True ");
-
+               // Debug.Log("True ");
+            
         }
 
         /*if (other.gameObject.tag == "Ball" && kicking == true)
@@ -155,19 +158,25 @@ public class player : MonoBehaviour
        //ballscript = GetComponent<ball>();
 */
     }
+    
 
-
-    void OnCollisionExit2D(Collision2D other) //in the air
+   /* void OnCollisionExit2D(Collision2D other) //in the air
     {
         if (other.gameObject.tag == "Floor")
         {
-            Jump = false;
-            // Debug.Log("False");
+
+            
+                Jump = false;
+                Debug.Log("False");
+
+             
+            
 
 
         }
     }
 
+    */
 
     private void Kick()
     {
