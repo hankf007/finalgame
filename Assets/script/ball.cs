@@ -13,7 +13,10 @@ public class ball : MonoBehaviour
 
     public Animator anim;
 
-    public AudioClip buzzer;
+    public AudioSource collision;
+    //public AudioSource portalinsound;
+    public AudioSource portaloutsound;
+    public AudioSource score;
 
     public GameObject portalout;
     public GameObject portalin1;
@@ -33,7 +36,8 @@ public class ball : MonoBehaviour
     public int Spawnx2;
     public int Spawny;
 
-    public bool cankick;
+    public bool cankick1;
+    public bool cankick2;
 
 
 
@@ -55,9 +59,11 @@ public class ball : MonoBehaviour
 
         scoremanager = GameObject.FindWithTag("Scoremanager").GetComponent<Scoremanager>(); //calls scoremanager
 
-        //  player1 = GetComponent<player>();
+        //  player1 = GetComponent<player>();\
+
 
         
+
 
     }
 
@@ -79,6 +85,7 @@ public class ball : MonoBehaviour
 
         if (other.gameObject.name == "ground1")
         { //if ball falls onto ground the power decreases
+            collision.Play();
 
             if (GameObject.Find("player1").GetComponent<player>().powerbar <= 50)
             {
@@ -95,6 +102,7 @@ public class ball : MonoBehaviour
         }
         else if (other.gameObject.name == "ground2")
         {
+            collision.Play();
             //if ball falls onto ground the power decreases
 
             if (GameObject.Find("player2").GetComponent<player>().powerbar <= 50)
@@ -117,8 +125,8 @@ public class ball : MonoBehaviour
 
         else if (other.gameObject.name == "goal1")
                {
-            
 
+            score.Play();
                 
 
                scoremanager.score2 += 1; //player 1 gains 1 point
@@ -138,10 +146,11 @@ public class ball : MonoBehaviour
         }
            else if (other.gameObject.name == "goal2")
            {
+            score.Play();
 
 
 
-               scoremanager.score1 += 1; //player 1 gains 1 point
+            scoremanager.score1 += 1; //player 1 gains 1 point
 
 
             RB.velocity = Vector3.zero; //set velocti to 0
@@ -157,9 +166,20 @@ public class ball : MonoBehaviour
 
         }
 
+        else if (other.gameObject.name == "player1")
+        {
+            collision.Play();
+        }
+
+        else if (other.gameObject.name == "player2")
+        {
+            collision.Play();
+        }
 
 
-       
+
+
+
 
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -169,7 +189,7 @@ public class ball : MonoBehaviour
 
         if (other.gameObject.name == "player1")
         {
-            cankick = true;
+            cankick1 = true;
 
             //  anim.SetBool("isorange", false);
 
@@ -191,7 +211,7 @@ public class ball : MonoBehaviour
         else if (other.gameObject.name == "player2")
 
         {
-            cankick = true;
+            cankick2 = true;
             //  anim.SetBool("isorange", true);
 
 
@@ -210,6 +230,9 @@ public class ball : MonoBehaviour
 
         else if (other.gameObject.name == "portalin1")
         {
+            portaloutsound.Play();
+
+
             portalout.SetActive(true);
             GameObject.FindWithTag("portalout").transform.position = new Vector2(4, 0); //summon portal out
             gameObject.transform.position = GameObject.FindWithTag("portalout").transform.position;
@@ -223,12 +246,16 @@ public class ball : MonoBehaviour
 
             StartCoroutine(Destroy()); //deactivate portalout
 
+          
+
             // Debug.Log("portalout"+portalout.transform.position);
 
 
         }
         else if (other.gameObject.name == "portalin2")
         {
+            portaloutsound.Play();
+
             portalout.SetActive(true);
             GameObject.FindWithTag("portalout").transform.position = new Vector2(-4, 0); //summon portal out
             gameObject.transform.position = GameObject.FindWithTag("portalout").transform.position;
@@ -241,6 +268,8 @@ public class ball : MonoBehaviour
 
             StartCoroutine(Destroy());
 
+           
+
 
             // Debug.Log("portalout"+portalout.transform.position);
 
@@ -252,15 +281,31 @@ public class ball : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
 
     {
-        cankick = true;  //make sure if both players touch the ball and one leaves the other can still kick the ball
+        //make sure if both players touch the ball and one leaves the other can still kick the ball
+
+
+        if (other.gameObject.name == "player1")
+        {
+            cankick1 = true;
+
+            
+        }
+
+
+        else if (other.gameObject.name == "player2")
+
+        {
+            cankick2 = true;
+         
+        }
 
     }
 
     void OnTriggerExit2D(Collider2D other)
 
     {
-        cankick = false;
-
+        cankick1 = false;
+        cankick2 = false;
     }
 
 
@@ -269,6 +314,8 @@ public class ball : MonoBehaviour
         yield return new WaitForSeconds(2f); //wait 2 secs until portal disappear
 
         portalout.SetActive(false);
+
+        
     }
 
 

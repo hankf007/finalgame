@@ -41,6 +41,11 @@ public class player : MonoBehaviour
     public int amountForceX;
     public int amountForceY;
 
+    public AudioSource portalinsound;
+
+
+    
+
 
 
 
@@ -83,11 +88,22 @@ public class player : MonoBehaviour
             Animator.SetBool("isJumping", true); //play jump anim 
         }
 
-        RB.velocity = vel;
+        RB.velocity = vel;  
 
-        if(Input.GetKey(kick)&& GameObject.Find("ball").GetComponent<ball>().cankick==true)
+        if(Input.GetKey(kick)  && GameObject.Find("ball").GetComponent<ball>().cankick1==true)
         {
+            if(gameObject.name=="player1")
+
             Kick();
+
+            Animator.SetBool("isKicking", true);
+        }
+
+        if (Input.GetKey(kick) && GameObject.Find("ball").GetComponent<ball>().cankick2 == true)
+        {
+            if (gameObject.name == "player2")
+
+                Kick();
 
             Animator.SetBool("isKicking", true);
         }
@@ -104,9 +120,10 @@ public class player : MonoBehaviour
             
         }
 
-        if (Input.GetKey(powerkey) && powerbar >= 100)
+        if (Input.GetKey(powerkey) && powerbar >= 10)
         {
             Power();
+           
         }
 
         
@@ -186,6 +203,8 @@ public class player : MonoBehaviour
     
        // Debug.Log("summon");
         portalin.SetActive(true);
+
+        portalinsound.Play();
         
 
         
