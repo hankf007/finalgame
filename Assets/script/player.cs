@@ -28,7 +28,7 @@ public class player : MonoBehaviour
 
 
     public bool kicking = false;
-    float animationDuration=0.5f; // Animation time in seconds
+    float animationDuration=1f; // Animation time in seconds
 
 
     public float powerbar=0;
@@ -90,20 +90,32 @@ public class player : MonoBehaviour
             Jump = false;
         }
 
-        RB.velocity = vel;  
+        RB.velocity = vel;
 
-        if(Input.GetKey(kick)  && GameObject.Find("ball").GetComponent<ball>().cankick1==true) //only the player touching the ball can kick it
+        if (Input.GetKey(kick))
+        {
+
+            Animator.SetBool("isKicking", true);
+
+        }
+
+            if (Input.GetKey(kick)  && GameObject.Find("ball").GetComponent<ball>().cankick1==true) //only the player touching the ball can kick it
         {
             if(gameObject.name=="player1")
+            { 
 
             Kick();
 
             Animator.SetBool("isKicking", true);
         }
+       
 
+        }
         if (Input.GetKey(kick) && GameObject.Find("ball").GetComponent<ball>().cankick2 == true)//only the player touching the ball can kick it
         {
             if (gameObject.name == "player2")
+
+                
 
                 Kick();
 
@@ -122,7 +134,7 @@ public class player : MonoBehaviour
             
         }
 
-        if (Input.GetKey(powerkey) && powerbar >= 10)
+        if (Input.GetKey(powerkey) && powerbar >= 100)
         {
             Power();
            
@@ -180,7 +192,7 @@ public class player : MonoBehaviour
 
     private void Kick()
     {
-        Animator.SetBool("isKicking", true);
+    
         // Invoke("StopKicking", animationDuration); //set kick to false after animation
 
 

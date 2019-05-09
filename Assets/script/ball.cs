@@ -90,14 +90,14 @@ public class ball : MonoBehaviour
         { //if ball falls onto ground the power decreases
             collision.Play();
 
-            if (GameObject.Find("player1").GetComponent<player>().powerbar <= 50)
+            if (GameObject.Find("player1").GetComponent<player>().powerbar <= 10)
             {
                 GameObject.Find("player1").GetComponent<player>().powerbar = 0;
             }
 
             else 
             {
-                GameObject.Find("player1").GetComponent<player>().powerbar -= 50;
+                GameObject.Find("player1").GetComponent<player>().powerbar -= 10;
 
             }
 
@@ -108,14 +108,14 @@ public class ball : MonoBehaviour
             collision.Play();
             //if ball falls onto ground the power decreases
 
-            if (GameObject.Find("player2").GetComponent<player>().powerbar <= 50)
+            if (GameObject.Find("player2").GetComponent<player>().powerbar <= 10)
             {
                 GameObject.Find("player2").GetComponent<player>().powerbar = 0;
             }
 
             else
             {
-                GameObject.Find("player2").GetComponent<player>().powerbar -= 50;
+                GameObject.Find("player2").GetComponent<player>().powerbar -= 10;
 
             }
             PlayParticle();
