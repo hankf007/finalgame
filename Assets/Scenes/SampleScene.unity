@@ -4706,6 +4706,12 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 1767992330}
+    - target: {fileID: 5353906319055942109, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 7202200787156707117, guid: d136334cdde3d416a9c3b4193046eba7,
+        type: 3}
     - target: {fileID: 9142560480892959988, guid: 8e35af612116e72449d5b6b37a9790d1,
         type: 3}
       propertyPath: m_LocalPosition.x

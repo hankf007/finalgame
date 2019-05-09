@@ -39,7 +39,9 @@ public class ball : MonoBehaviour
     public bool cankick1;
     public bool cankick2;
 
+    public ParticleSystem particle;
 
+    public Vector2 particlepos;
 
 
     // public player player1;
@@ -61,7 +63,7 @@ public class ball : MonoBehaviour
 
         //  player1 = GetComponent<player>();\
 
-
+        
         
 
 
@@ -71,7 +73,8 @@ public class ball : MonoBehaviour
 
     void Update()
     {
-       // Debug.Log(cankick);
+        // Debug.Log(cankick);
+        particlepos = gameObject.transform.position;
     }
 
 
@@ -98,7 +101,7 @@ public class ball : MonoBehaviour
 
             }
 
-
+            PlayParticle();
         }
         else if (other.gameObject.name == "ground2")
         {
@@ -115,7 +118,7 @@ public class ball : MonoBehaviour
                 GameObject.Find("player2").GetComponent<player>().powerbar -= 50;
 
             }
-
+            PlayParticle();
         }
 
         
@@ -169,16 +172,18 @@ public class ball : MonoBehaviour
         else if (other.gameObject.name == "player1")
         {
             collision.Play();
+            PlayParticle();
         }
 
         else if (other.gameObject.name == "player2")
         {
             collision.Play();
+            PlayParticle();
         }
 
 
 
-
+        particlepos = gameObject.transform.position; 
 
 
     }
@@ -274,6 +279,7 @@ public class ball : MonoBehaviour
             // Debug.Log("portalout"+portalout.transform.position);
 
 
+           
         }
     }
 
@@ -318,8 +324,14 @@ public class ball : MonoBehaviour
         
     }
 
+    public void PlayParticle()
+    {
+        Instantiate(particle, particlepos, Quaternion.identity);
+        
+    }
 
-    
+
+
 
 
 

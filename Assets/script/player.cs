@@ -191,10 +191,11 @@ public class player : MonoBehaviour
             // kicking = true;
 
             GameObject.Find("ball").GetComponent<ball>().RB.AddForce(new Vector2(amountForceX, amountForceY));
+            GameObject.Find("ball").GetComponent<ball>().PlayParticle();
 
            // Debug.Log("kicktrue");
 
-           
+
 
         }
     }
