@@ -20,9 +20,9 @@ public class ball : MonoBehaviour
     public GameObject portalin2;
 
 
-    public int amountForceX1;
-    public int amountForceX2;
-    public int amountForceY;
+   // public int amountForceX1;
+   // public int amountForceX2;
+   // public int amountForceY;
 
     public int portalForceX1;
     public int portalForceX2;
@@ -32,6 +32,9 @@ public class ball : MonoBehaviour
     public int Spawnx1;
     public int Spawnx2;
     public int Spawny;
+
+    public bool cankick;
+
 
 
 
@@ -62,7 +65,7 @@ public class ball : MonoBehaviour
 
     void Update()
     {
-      
+        Debug.Log(cankick);
     }
 
 
@@ -71,47 +74,10 @@ public class ball : MonoBehaviour
 
         
 
-         if (other.gameObject.name == "portalin1" )
-        {
-            portalout.SetActive(true);
-            GameObject.FindWithTag("portalout").transform.position = new Vector2(4, 0); //summon portal out
-            gameObject.transform.position = GameObject.FindWithTag("portalout").transform.position;
-
-            RB.velocity = Vector3.zero; //set velocti to 0
-          
-
-            RB.AddForce(new Vector2(portalForceX1, portalForceY)); //give new velocity
-
-            portalin1.SetActive(false); //deactivate portalin
-
-            StartCoroutine(Destroy()); //deactivate portalout
-
-            // Debug.Log("portalout"+portalout.transform.position);
+       
 
 
-        }
-        else if (other.gameObject.name == "portalin2")
-        { 
-            portalout.SetActive(true);
-            GameObject.FindWithTag("portalout").transform.position = new Vector2(-4, 0); //summon portal out
-            gameObject.transform.position = GameObject.FindWithTag("portalout").transform.position;
-
-            RB.velocity = Vector3.zero; //set velocti to 0
-
-            RB.AddForce(new Vector2(portalForceX2, portalForceY));
-
-            portalin2.SetActive(false);
-
-            StartCoroutine(Destroy());
-
-
-            // Debug.Log("portalout"+portalout.transform.position);
-
-
-        }
-
-
-        else if (other.gameObject.name == "bottombar1")
+        if (other.gameObject.name == "bottombar1")
         { //if ball falls onto ground the power decreases
 
             if (GameObject.Find("player1").GetComponent<player>().powerbar <= 50)
@@ -199,49 +165,106 @@ public class ball : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
 
     {
+        
 
         if (other.gameObject.name == "player1")
         {
+            cankick = true;
 
             //  anim.SetBool("isorange", false);
 
 
             //  Debug.Log("1");
 
-            if (GameObject.Find("player1").GetComponent<player>().kicking == true)
-            {
-                Debug.Log("kicked");
-                RB.AddForce(new Vector2(amountForceX1, amountForceY)); // kick the ball
+         //   if (GameObject.Find("player1").GetComponent<player>().kicking == true)
+          //  {
+           //     Debug.Log("kicked");
+               // RB.AddForce(new Vector2(amountForceX1, amountForceY)); // kick the ball
 
 
                 // Vector3 direction = (other.transform.position - transform.position).normalized;
                 // GetComponent<Rigidbody2D>().AddForce(transform.up * kickForce);
-            }
+          //  }
         }
 
 
         else if (other.gameObject.name == "player2")
+
         {
+            cankick = true;
             //  anim.SetBool("isorange", true);
 
 
             //  Debug.Log("2");
 
-            if (GameObject.Find("player2").GetComponent<player>().kicking == true)
-            {
-                Debug.Log("kicked");
-                RB.AddForce(new Vector2(amountForceX2, amountForceY)); // kick the ball
+          //  if (GameObject.Find("player2").GetComponent<player>().kicking == true)
+          //  {
+           //     Debug.Log("kicked");
+              //  RB.AddForce(new Vector2(amountForceX2, amountForceY)); // kick the ball
 
 
                 // Vector3 direction = (other.transform.position - transform.position).normalized;
                 // GetComponent<Rigidbody2D>().AddForce(transform.up * kickForce);
-            }
+          //  }
+        }
+
+        else if (other.gameObject.name == "portalin1")
+        {
+            portalout.SetActive(true);
+            GameObject.FindWithTag("portalout").transform.position = new Vector2(4, 0); //summon portal out
+            gameObject.transform.position = GameObject.FindWithTag("portalout").transform.position;
+
+            RB.velocity = Vector3.zero; //set velocti to 0
+
+
+            RB.AddForce(new Vector2(portalForceX1, portalForceY)); //give new velocity
+
+            portalin1.SetActive(false); //deactivate portalin
+
+            StartCoroutine(Destroy()); //deactivate portalout
+
+            // Debug.Log("portalout"+portalout.transform.position);
+
+
+        }
+        else if (other.gameObject.name == "portalin2")
+        {
+            portalout.SetActive(true);
+            GameObject.FindWithTag("portalout").transform.position = new Vector2(-4, 0); //summon portal out
+            gameObject.transform.position = GameObject.FindWithTag("portalout").transform.position;
+
+            RB.velocity = Vector3.zero; //set velocti to 0
+
+            RB.AddForce(new Vector2(portalForceX2, portalForceY));
+
+            portalin2.SetActive(false);
+
+            StartCoroutine(Destroy());
+
+
+            // Debug.Log("portalout"+portalout.transform.position);
+
+
         }
     }
 
 
+    void OnTriggerStay2D(Collider2D other)
 
-    private IEnumerator Destroy()
+    {
+        cankick = true;  //make sure if both players touch the ball and one leaves the other can still kick the ball
+
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+
+    {
+        cankick = false;
+
+    }
+
+
+        private IEnumerator Destroy() //turn off portal
     {
         yield return new WaitForSeconds(2f); //wait 2 secs until portal disappear
 

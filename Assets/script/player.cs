@@ -22,8 +22,7 @@ public class player : MonoBehaviour
 
     public KeyCode kick;
 
-    public Sprite sprite1;
-    public Sprite sprite2;
+  
 
     public Animator Animator;
 
@@ -39,6 +38,10 @@ public class player : MonoBehaviour
     public GameObject portalin;
 
 
+    public int amountForceX;
+    public int amountForceY;
+
+
 
 
 
@@ -52,12 +55,12 @@ public class player : MonoBehaviour
         if (Input.GetKey(right))
         {
             vel.x = Speed;
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprite1; //change sprite
+           
         }
         else if (Input.GetKey(left))
         {
             vel.x = -Speed;
-            gameObject.GetComponent<SpriteRenderer>().sprite = sprite2; //change sprite
+           
         }
         else
         {
@@ -70,7 +73,7 @@ public class player : MonoBehaviour
         }
         RB.velocity = vel;
 
-        if(Input.GetKey(kick))
+        if(Input.GetKey(kick)&& GameObject.Find("ball").GetComponent<ball>().cankick==true)
         {
             Kick();
         }
@@ -132,10 +135,13 @@ public class player : MonoBehaviour
     {
         if (!kicking)
         {
-            kicking = true;
+            // kicking = true;
+
+            GameObject.Find("ball").GetComponent<ball>().RB.AddForce(new Vector2(amountForceX, amountForceY));
+
             Debug.Log("kicktrue");
             Animator.SetBool("isKicking", true);
-            Invoke("StopKicking", animationDuration); //set kick to false after animation
+           // Invoke("StopKicking", animationDuration); //set kick to false after animation
         }
     }
 
@@ -145,14 +151,14 @@ public class player : MonoBehaviour
         Debug.Log("kickfalse");
         Animator.SetBool("isKicking", false);
     }
-
+    
 
     private void Power() 
     {
     
         Debug.Log("summon");
         portalin.SetActive(true);
-       
+        
 
         
         StartCoroutine(Destroy());
@@ -162,7 +168,7 @@ public class player : MonoBehaviour
 
     }
 
-    private IEnumerator Destroy()
+    private IEnumerator Destroy() //turn off portal
     {
         yield return new WaitForSeconds(5f);
 

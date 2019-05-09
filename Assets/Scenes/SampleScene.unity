@@ -527,13 +527,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353629575}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.002047956, y: 0.0006633997}
+  m_Offset: {x: 0.10058965, y: 0.0006633997}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -544,7 +544,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3837883, y: 4.2057343}
+  m_Size: {x: 0.4024497, y: 2.4142416}
   m_EdgeRadius: 0
 --- !u!61 &353629579
 BoxCollider2D:
@@ -556,7 +556,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.37, y: 0.0010308623}
@@ -784,10 +784,10 @@ PolygonCollider2D:
       - {x: -0.5053125, y: -0.28218752}
       - {x: -0.5840625, y: -0.3609375}
       - {x: -0.75468755, y: -0.5578125}
-      - {x: -0.78093755, y: -0.9121875}
-      - {x: -0.82031256, y: -0.9253125}
-      - {x: -0.9121875, y: -1.0434376}
-      - {x: -0.9121875, y: -1.1221875}
+      - {x: -0.752165, y: -0.8978011}
+      - {x: -0.75797164, y: -0.8869487}
+      - {x: -0.7587331, y: -0.88998276}
+      - {x: -0.75873256, y: -1.1269829}
       - {x: 1.1221875, y: -1.1221875}
       - {x: 1.1221875, y: 0.8728125}
       - {x: 1.0959375, y: 0.8990625}
@@ -1233,14 +1233,14 @@ MonoBehaviour:
   right: 100
   up: 119
   kick: 103
-  sprite1: {fileID: 21300000, guid: 569a064fe1f5f0a488f149d21d8b75fb, type: 3}
-  sprite2: {fileID: 21300000, guid: 0a68a5232722f6b40b5a4995dc9063b5, type: 3}
   Animator: {fileID: 630750588}
   kicking: 0
   powerbar: 0
   power: {fileID: 2042101778}
   powerkey: 104
   portalin: {fileID: 353629575}
+  amountForceX: 35
+  amountForceY: 75
 --- !u!114 &630750591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,7 +1269,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08215985, y: -0.74575335}
+  m_Offset: {x: -0.05514747, y: -0.74575335}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1280,7 +1280,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4181638, y: 1.4484934}
+  m_Size: {x: 1.1435491, y: 1.4484934}
   m_EdgeRadius: 0
 --- !u!61 &630750593
 BoxCollider2D:
@@ -1765,14 +1765,14 @@ MonoBehaviour:
   right: 275
   up: 273
   kick: 46
-  sprite1: {fileID: 21300000, guid: 0247ef5e93a687f42849684c5de6d1cf, type: 3}
-  sprite2: {fileID: 21300000, guid: 7a7a03bd39200154bb37ef863170fc5e, type: 3}
   Animator: {fileID: 881043414}
   kicking: 0
   powerbar: 0
   power: {fileID: 1495371447}
   powerkey: 44
   portalin: {fileID: 921659091}
+  amountForceX: -35
+  amountForceY: 75
 --- !u!114 &881043416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1801,7 +1801,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07780525, y: -0.6179679}
+  m_Offset: {x: 0.06118822, y: -0.612788}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1812,7 +1812,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6424861, y: 1.047227}
+  m_Size: {x: 1.3644991, y: 1.0368673}
   m_EdgeRadius: 0
 --- !u!61 &881043418
 BoxCollider2D:
@@ -1827,7 +1827,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.8242681, y: -0.58274716}
+  m_Offset: {x: -0.8665702, y: -0.50504893}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1838,7 +1838,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3514638, y: 1.0745059}
+  m_Size: {x: 0.43606794, y: 1.2299024}
   m_EdgeRadius: 0
 --- !u!1 &921659091
 GameObject:
@@ -1891,7 +1891,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.38, y: -0.0023421347}
@@ -1928,13 +1928,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921659091}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.002047956, y: 0.0006633997}
+  m_Offset: {x: -0.10935089, y: -0.004002154}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1945,7 +1945,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3837883, y: 4.2057343}
+  m_Size: {x: 0.39311892, y: 2.40491}
   m_EdgeRadius: 0
 --- !u!212 &921659097
 SpriteRenderer:
@@ -3185,9 +3185,9 @@ PolygonCollider2D:
       - {x: -0.93187505, y: 0.8990625}
       - {x: -1.010625, y: 0.8990625}
       - {x: -1.010625, y: -1.1221875}
-      - {x: 1.010625, y: -1.1221875}
-      - {x: 1.010625, y: -1.0171876}
-      - {x: 0.94500005, y: -0.9515625}
+      - {x: 0.8088538, y: -0.8842779}
+      - {x: 0.8208993, y: -0.8575773}
+      - {x: 0.8124936, y: -0.86422867}
 --- !u!95 &1666080988
 Animator:
   serializedVersion: 3
@@ -3823,7 +3823,7 @@ PrefabInstance:
     - target: {fileID: 5353906319055942109, guid: 8e35af612116e72449d5b6b37a9790d1,
         type: 3}
       propertyPath: amountForceY
-      value: 250
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 5353906319055942109, guid: 8e35af612116e72449d5b6b37a9790d1,
         type: 3}
@@ -3900,5 +3900,10 @@ PrefabInstance:
       propertyPath: portalout
       value: 
       objectReference: {fileID: 1681710464572459695}
+    - target: {fileID: 5353906319055942099, guid: 8e35af612116e72449d5b6b37a9790d1,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e35af612116e72449d5b6b37a9790d1, type: 3}
