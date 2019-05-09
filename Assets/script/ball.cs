@@ -129,7 +129,7 @@ public class ball : MonoBehaviour
             score.Play();
                 
 
-               scoremanager.score2 += 1; //player 1 gains 1 point
+            scoremanager.score2 += 1; //player 1 gains 1 point
 
             RB.velocity = Vector3.zero; //set velocty to 0
 
