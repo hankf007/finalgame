@@ -65,7 +65,7 @@ public class ball : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(cankick);
+       // Debug.Log(cankick);
     }
 
 
@@ -77,7 +77,7 @@ public class ball : MonoBehaviour
        
 
 
-        if (other.gameObject.name == "bottombar1")
+        if (other.gameObject.name == "ground1")
         { //if ball falls onto ground the power decreases
 
             if (GameObject.Find("player1").GetComponent<player>().powerbar <= 50)
@@ -93,7 +93,7 @@ public class ball : MonoBehaviour
 
 
         }
-        else if (other.gameObject.name == "bottombar2")
+        else if (other.gameObject.name == "ground2")
         {
             //if ball falls onto ground the power decreases
 

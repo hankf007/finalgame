@@ -98,15 +98,19 @@ public class player : MonoBehaviour
         {
             powerbar += 5 * Time.deltaTime; //increase power automatically
             power.text = powerbar.ToString();
+
+            
+
+            
         }
 
-        if (Input.GetKey(powerkey) && powerbar >= 10)
+        if (Input.GetKey(powerkey) && powerbar >= 100)
         {
             Power();
         }
 
-
-
+        
+        //Debug.Log(GameObject.Find("energy1").GetComponent<energy>().scale.x);
 
 
 
@@ -162,7 +166,7 @@ public class player : MonoBehaviour
 
             GameObject.Find("ball").GetComponent<ball>().RB.AddForce(new Vector2(amountForceX, amountForceY));
 
-            Debug.Log("kicktrue");
+           // Debug.Log("kicktrue");
 
            
 
@@ -172,7 +176,7 @@ public class player : MonoBehaviour
     private void StopKicking()
     {
         kicking = false;
-        Debug.Log("kickfalse");
+        //Debug.Log("kickfalse");
         Animator.SetBool("isKicking", false);
     }
     
@@ -180,13 +184,13 @@ public class player : MonoBehaviour
     private void Power() 
     {
     
-        Debug.Log("summon");
+       // Debug.Log("summon");
         portalin.SetActive(true);
         
 
         
         StartCoroutine(Destroy());
-        Debug.Log("destroyed");
+      //  Debug.Log("destroyed");
 
         powerbar = 0;
 
