@@ -192,9 +192,8 @@ public class player : MonoBehaviour
 
     private void Kick()
     {
-    
-        // Invoke("StopKicking", animationDuration); //set kick to false after animation
 
+      
 
         Invoke("StopKicking", animationDuration); //set kick to false after animation
 
